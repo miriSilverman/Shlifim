@@ -59,6 +59,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button moreOptions = (Button) findViewById(R.id.moreOptions);
+        moreOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), Menu.class);
+//                startIntent.putExtra("moving to ", "Welcome to the roots world!");
+                startActivity(startIntent);
+            }
+        });
+
+
 
         Button walfarmBtn = (Button) findViewById(R.id.walfarm);
         walfarmBtn.setOnClickListener(new View.OnClickListener() {

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:fontFamily="casual"
+        android:text="Name"
+        android:textColor="#009688"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/priceView"
+        android:layout_width="87dp"
+        android:layout_height="53dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginLeft="77dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_toEndOf="@+id/nameTextView"
+        android:layout_toRightOf="@+id/nameTextView"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Price"
+        android:textColor="#009688"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="349dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/nameTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginRight="43dp"
+        android:text="Description"
+        android:textColor="#21619F" />
+
+</RelativeLayout>

@@ -8,14 +8,14 @@
         <item>pearson correlation</item>
     </string-array>
 
-    <string-array name="price">
+    <string-array name="prices">
         <item>$0.99</item>
         <item>$0.50</item>
         <item>$0.50</item>
     </string-array>
 
     <string-array name="descriptions">
-        <item>show transformations matrices as rotation, translation, scailing etc</item>
+        <item>show transformations matrices such as rotation, translation, scailing etc</item>
         <item>calculate projection</item>
         <item>calculate pearson correlation</item>
     </string-array>

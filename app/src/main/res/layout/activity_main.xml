@@ -112,8 +112,20 @@
         android:text="Wolfram"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.773"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/results"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintVertical_bias="0.522" />
+
+    <Button
+        android:id="@+id/moreOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#E4E14378"
+        android:text="more options"
+        android:textColor="#171616"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/walfarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/results" />
 </androidx.constraintlayout.widget.ConstraintLayout>
