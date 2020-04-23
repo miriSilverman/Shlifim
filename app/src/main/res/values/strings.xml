@@ -2,4 +2,21 @@
     <string name="app_name">my first app</string>
     <string name="button">Button</string>
     <string name="textview">TextView</string>
+    <string-array name="options">
+        <item>transformations</item>
+        <item>projection</item>
+        <item>pearson correlation</item>
+    </string-array>
+
+    <string-array name="price">
+        <item>$0.99</item>
+        <item>$0.50</item>
+        <item>$0.50</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>show transformations matrices as rotation, translation, scailing etc</item>
+        <item>calculate projection</item>
+        <item>calculate pearson correlation</item>
+    </string-array>
 </resources>
