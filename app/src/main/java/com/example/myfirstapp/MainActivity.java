@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if (player == null)
         {
-            player = MediaPlayer.create(this, R.raw.DanceMonkey);
+            player = MediaPlayer.create(this, R.raw.monkey);
             player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
                 public void onCompletion(MediaPlayer mp) {
@@ -71,22 +71,23 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
     {
         case R.id.item1:
-            Toast.makeText(this, "Item 1 selected", Toast.LENGTH_SHORT).show();
-            play(this.findViewById(R.id.imageView));
+            Toast.makeText(this, "press the dots to play song", Toast.LENGTH_SHORT).show();
             return true;
         case R.id.item2:
-            Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
-            stop(this.findViewById(R.id.imageView));
+            play(this.findViewById(R.id.imageView));
+
+            Toast.makeText(this, "playing song", Toast.LENGTH_SHORT).show();
             return true;
         case R.id.item3:
-            Toast.makeText(this, "Item 3 selected", Toast.LENGTH_SHORT).show();
-            pause(this.findViewById(R.id.imageView));
             return true;
         case R.id.sub_item1:
-            Toast.makeText(this, "sub item 1 selected", Toast.LENGTH_SHORT).show();
+            stop(this.findViewById(R.id.imageView));
+
+            Toast.makeText(this, "song is stopped", Toast.LENGTH_SHORT).show();
             return true;
         case R.id.sub_item2:
-            Toast.makeText(this, "sub item 2 selected", Toast.LENGTH_SHORT).show();
+            pause(this.findViewById(R.id.imageView));
+            Toast.makeText(this, "song is paused", Toast.LENGTH_SHORT).show();
             return true;
         default:
             return super.onOptionsItemSelected(item);
