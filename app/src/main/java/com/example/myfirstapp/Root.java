@@ -1,14 +1,45 @@
 package com.example.myfirstapp;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Root extends AppCompatActivity {
+    public static Button exit;
+
+    public void backToMainButton()
+    {
+        exit = (Button)findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder alert = new AlertDialog.Builder(Root.this);
+                alert.setMessage("wanna go back to main menu?")
+                        .setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+                }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+
+                AlertDialog alertDialog = alert.create();
+                alertDialog.setTitle("Hi there !!!!");
+                alertDialog.show();
+
+            }
+        });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +75,7 @@ public class Root extends AppCompatActivity {
         });
 
 
-
-
-
+        backToMainButton();
 
 
 

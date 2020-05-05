@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
     {
         case R.id.item1:
             Toast.makeText(this, "press the dots to play song", Toast.LENGTH_SHORT).show();
+            cakeExitButton();
             return true;
         case R.id.item2:
             play(this.findViewById(R.id.imageView));
@@ -173,6 +176,30 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+    }
+
+
+
+    public void cakeExitButton()
+    {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+        alert.setMessage("Are you sure you are that much stupid to wanna exit my amazing app??")
+                .setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        AlertDialog alertDialog = alert.create();
+        alertDialog.setTitle("Pay really close attention !!!!");
+        alertDialog.show();
 
     }
 }
