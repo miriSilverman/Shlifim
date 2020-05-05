@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Root extends AppCompatActivity {
     public static Button exit;
+    public static Button next;
+
+    public void toNextActivity()
+    {
+        next =  (Button) findViewById(R.id.nextActivity);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(".FromRoot");
+                startActivity(intent);
+            }
+        });
+    }
+
 
     public void backToMainButton()
     {
@@ -76,6 +91,7 @@ public class Root extends AppCompatActivity {
 
 
         backToMainButton();
+        toNextActivity();
 
 
 
