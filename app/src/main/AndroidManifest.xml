@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".FromRoot">
+        <activity android:name=".transformations">
             <intent-filter>
-                <action android:name=".FromRoot" />
-
+                <action android:name=".transformations" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+        </activity>
 
+
+        <activity android:name=".FromRoot">
+            <intent-filter>
+                <action android:name=".FromRoot" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
 
 

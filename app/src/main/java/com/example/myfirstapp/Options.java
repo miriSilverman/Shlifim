@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Options extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,12 @@ public class Options extends AppCompatActivity {
 
         Intent in = getIntent();
         int index = in.getIntExtra("androidx.appcompat.app.AppCompatActivity.ITEM_INDEX", -1);
-        if (index > -1)
+        if (index == 0)
+        {
+            Intent intent = new Intent(".transformations");
+            startActivity(intent);
+        }
+        else if (index > -1)
         {
             int pic = getImage(index);
             ImageView img = (ImageView) findViewById(R.id.imageView);
@@ -28,12 +34,13 @@ public class Options extends AppCompatActivity {
 
 
 
-    private int getImage(int index)
+    public int getImage(int index)
     {
         switch (index)
         {
             case 0:
-                return R.drawable.hermione;
+                return R.drawable.translation;
+//                return R.drawable.hermione;
             case 1:
                 return R.drawable.harry;
             case 2:
@@ -45,7 +52,7 @@ public class Options extends AppCompatActivity {
 
 
 
-    private void scaleImage(ImageView img, int pic)
+    public void scaleImage(ImageView img, int pic)
     {
         Display screen = getWindowManager().getDefaultDisplay();
         BitmapFactory.Options op = new BitmapFactory.Options();
@@ -64,11 +71,6 @@ public class Options extends AppCompatActivity {
         op.inJustDecodeBounds = false;
         Bitmap scaledImg = BitmapFactory.decodeResource(getResources(), pic, op);
         img.setImageBitmap(scaledImg);
-
-
-
-
-
 
     }
 
