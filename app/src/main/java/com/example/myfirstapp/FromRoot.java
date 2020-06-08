@@ -3,7 +3,6 @@ package com.example.myfirstapp;
 import android.os.Bundle;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -34,21 +33,22 @@ public class FromRoot extends AppCompatActivity {
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         progressValue = progress;
                         textView.setText("covered: "+ progressValue+ " /  "+seekBar.getMax());
-                        Toast.makeText(FromRoot.this, "seek bar on progress", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(FromRoot.this, "seek bar on progress", Toast.LENGTH_SHORT).show();
+
 
 
                     }
 
                     @Override
                     public void onStartTrackingTouch(SeekBar seekBar) {
-                        Toast.makeText(FromRoot.this, "seek bar on start tracking", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(FromRoot.this, "seek bar on start tracking", Toast.LENGTH_SHORT).show();
 
                     }
 
                     @Override
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         textView.setText("covered: "+ progressValue+ " /  "+seekBar.getMax());
-                        Toast.makeText(FromRoot.this, "seek bar on stop tracking", Toast.LENGTH_LONG).show();
+//                        Toast.makeText(FromRoot.this, "seek bar on stop tracking", Toast.LENGTH_SHORT).show();
 
 
                     }

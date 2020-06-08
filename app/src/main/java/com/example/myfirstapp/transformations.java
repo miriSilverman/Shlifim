@@ -80,27 +80,7 @@ public class transformations extends AppCompatActivity {
     }
 
 
-//    public void scaleImage(ImageView img, int pic)
-//    {
-//        Display screen = getWindowManager().getDefaultDisplay();
-//        BitmapFactory.Options op = new BitmapFactory.Options();
-//
-//        op.inJustDecodeBounds = true;
-//        BitmapFactory.decodeResource(getResources(), pic, op);
-//        int imgWidth = op.outWidth;
-//        int screenWidth = screen.getWidth();
-//
-//        if(imgWidth > screenWidth)
-//        {
-//            int ratio = Math.round( (float)imgWidth / (float) screenWidth);
-//            op.inSampleSize = ratio;
-//        }
-//
-//        op.inJustDecodeBounds = false;
-//        Bitmap scaledImg = BitmapFactory.decodeResource(getResources(), pic, op);
-//        img.setImageBitmap(scaledImg);
-//
-//    }
+
 
 
 }
